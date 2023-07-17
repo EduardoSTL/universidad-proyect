@@ -14,13 +14,24 @@ public class Aula implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    
+    @Column(name = "numero_aula", nullable = false)
     private Integer nroAula;
+    @Column(name = "medidas_mtsxmts", nullable = false)
     private String medidas;
+    @Column(name = "cantidad_pupitres")
     private Integer cantidadPupitres;
+    @Column(name = "tipo_pizarron")
+    @Enumerated(EnumType.STRING)
     private Pizarron pizarron;
+    @Column(name = "fecha_alta")
     private LocalDate fechaAlta;
+    @Column(name = "fecha_modificacion")
     private LocalDate fechaModificacion;
+
+    //Relacion
+    @ManyToOne(optional = true, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinColumn(name = "pabellon_id", foreignKey = @ForeignKey(name = "FK_PABELLON_ID"))
+    private Pabellon pabellon;
 
     //Constructores
     public Aula() {
@@ -88,6 +99,22 @@ public class Aula implements Serializable {
 
     public void setFechaModificacion(LocalDate fechaModificacion) {
         this.fechaModificacion = fechaModificacion;
+    }
+
+    public Pabellon getPabellon() {
+        return pabellon;
+    }
+    public void setPabellon(Pabellon pabellon) {
+        this.pabellon = pabellon;
+    }
+
+    @PrePersist
+    private void antesdePersistir(){
+        this.fechaAlta = LocalDate.now();
+    }
+    @PreUpdate
+    private void despuesdeUpdate(){
+        this.fechaModificacion = LocalDate.now();
     }
 
     @Override

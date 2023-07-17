@@ -1,2 +1,6 @@
-package org.melgardeveloper.universidadproyect.models;public enum TipoEmpleado {
+package org.melgardeveloper.universidadproyect.models.enums;
+
+public enum TipoEmpleado {
+    ADMINISTRATIVO,
+    MANTENIMIENTO
 }
