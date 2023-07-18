@@ -37,13 +37,11 @@ public abstract class Persona implements Serializable {
     public Persona() {
     }
 
-    public Persona(Integer id, String nombre, String apellido, String dui, LocalDate fechaAlta, LocalDate fechaModificacion, Direccion direccion) {
+    public Persona(Integer id, String nombre, String apellido, String dui, Direccion direccion) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.dui = dui;
-        this.fechaAlta = fechaAlta;
-        this.fechaModificacion = fechaModificacion;
         this.direccion = direccion;
     }
 
@@ -127,7 +125,7 @@ public abstract class Persona implements Serializable {
                 '}';
     }
 
-    //Comparar tipo de Persona
+    //Comparar tipo de Persona, retorna el id y el dui de Persona
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

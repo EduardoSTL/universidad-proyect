@@ -25,8 +25,8 @@ public class Empleado extends Persona{
     }
 
     //Constr. de Persona completo:
-    public Empleado(Integer id, String nombre, String apellido, String dui, LocalDate fechaAlta, LocalDate fechaModificacion, Direccion direccion, BigDecimal sueldo, TipoEmpleado tipoEmpleado) {
-        super(id, nombre, apellido, dui, fechaAlta, fechaModificacion, direccion);
+    public Empleado(Integer id, String nombre, String apellido, String dui,  Direccion direccion, BigDecimal sueldo, TipoEmpleado tipoEmpleado) {
+        super(id, nombre, apellido, dui, direccion);
         this.sueldo = sueldo;
         this.tipoEmpleado = tipoEmpleado;
     }

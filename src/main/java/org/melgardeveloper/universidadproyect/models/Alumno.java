@@ -18,8 +18,8 @@ public class Alumno extends Persona{
     }
 
     //Constr. de Persona completo:
-    public Alumno(Integer id, String nombre, String apellido, String dui, LocalDate fechaAlta, LocalDate fechaModificacion, Direccion direccion) {
-        super(id, nombre, apellido, dui, fechaAlta, fechaModificacion, direccion);
+    public Alumno(Integer id, String nombre, String apellido, String dui, Direccion direccion) {
+        super(id, nombre, apellido, dui, direccion);
     }
 
     public Carrera getCarrera() {

@@ -23,8 +23,8 @@ public class Profesor extends Persona{
     }
 
     //Constr. de Persona completo + sueldo:
-    public Profesor(Integer id, String nombre, String apellido, String dui, LocalDate fechaAlta, LocalDate fechaModificacion, Direccion direccion, BigDecimal sueldo) {
-        super(id, nombre, apellido, dui, fechaAlta, fechaModificacion, direccion);
+    public Profesor(Integer id, String nombre, String apellido, String dui, Direccion direccion, BigDecimal sueldo) {
+        super(id, nombre, apellido, dui, direccion);
         this.sueldo = sueldo;
     }
 
