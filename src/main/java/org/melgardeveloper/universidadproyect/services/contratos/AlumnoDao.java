@@ -10,7 +10,8 @@ import java.util.Optional;
 
 public interface AlumnoDao extends PersonaDao{
 
-    Iterable<Aula> findAulaByPizarron(Pizarron pizarron);
+    /*Iterable<Aula> findAulaByPizarron(Pizarron pizarron);
     Iterable<Aula> findAulaByPabellonNombre(String nombre);
-    Optional<Aula> findAulaByNroAula(Integer nroAula);
+    Optional<Aula> findAulaByNroAula(Integer nroAula);*/
+    Iterable<Persona> buscarAlumnosPorNombreCarrera(String nombre);
 }

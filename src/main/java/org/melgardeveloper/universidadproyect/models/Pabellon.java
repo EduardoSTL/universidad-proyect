@@ -20,6 +20,9 @@ public class Pabellon implements Serializable {
     @Column(name = "nombre_pabellon", unique = true, nullable = false)
     private String nombre;
 
+    @Column(name = "direcciones")
+    private Direccion direccion;
+
     @Embedded
     @AttributeOverrides(
             {@AttributeOverride(name = "codigoPostal", column = @Column(name = "codigo_postal")),
@@ -38,12 +41,11 @@ public class Pabellon implements Serializable {
     public Pabellon() {
     }
 
-    public Pabellon(Integer id, Double mts2, String nombre, LocalDate fechaAlta, LocalDate fechaModificacion) {
+    public Pabellon(Integer id, Double mts2, String nombre, Direccion direccion) {
         this.id = id;
         this.mts2 = mts2;
         this.nombre = nombre;
-        this.fechaAlta = fechaAlta;
-        this.fechaModificacion = fechaModificacion;
+        this.direccion = direccion;
     }
 
     public Integer getId() {
@@ -92,6 +94,14 @@ public class Pabellon implements Serializable {
 
     public void setAulas(Set<Aula> aulas) {
         this.aulas = aulas;
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
     }
 
     @PrePersist

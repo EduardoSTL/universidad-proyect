@@ -1,8 +1,8 @@
 package org.melgardeveloper.universidadproyect.services.implementaciones;
 
 
-import org.melgardeveloper.universidadproyect.models.Aula;
-import org.melgardeveloper.universidadproyect.models.enums.Pizarron;
+import org.melgardeveloper.universidadproyect.models.Persona;
+import org.melgardeveloper.universidadproyect.repositories.AlumnoRepository;
 import org.melgardeveloper.universidadproyect.repositories.PersonaRepository;
 import org.melgardeveloper.universidadproyect.services.contratos.AlumnoDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ public class AlumnoDaoImpl extends PersonaDaoImpl implements AlumnoDao {
         super(repository);
     }
 
-    @Override
+    /*@Override
     public Iterable<Aula> findAulaByPizarron(Pizarron pizarron) {
         return null;
     }
@@ -35,5 +35,10 @@ public class AlumnoDaoImpl extends PersonaDaoImpl implements AlumnoDao {
     @Override
     public Optional<Aula> findAulaByNroAula(Integer nroAula) {
         return Optional.empty();
+    }*/
+
+    @Override
+    public Iterable<Persona> buscarAlumnosPorNombreCarrera(String nombre) {
+        return ((AlumnoRepository)repository).buscarAlumnosPorNombreCarrera(nombre);
     }
 }
