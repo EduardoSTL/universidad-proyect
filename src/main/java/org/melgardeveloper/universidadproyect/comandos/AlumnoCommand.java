@@ -1,7 +1,6 @@
 package org.melgardeveloper.universidadproyect.comandos;
 
 import org.melgardeveloper.universidadproyect.models.Persona;
-import org.melgardeveloper.universidadproyect.services.contratos.AlumnoDao;
 import org.melgardeveloper.universidadproyect.services.contratos.CarreraDao;
 import org.melgardeveloper.universidadproyect.services.contratos.PersonaDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +9,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import java.util.Optional;
 
 @Component
 @Order(1)
@@ -25,7 +23,7 @@ public class AlumnoCommand implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println("----------------- ALumnos Command -----------------");
+        /*System.out.println("----------------- ALumnos Command -----------------");
         System.out.println("----------------- Busqueda de Personas por Apellido -----------------");
         Iterable<Persona> iPersona = personaDao.buscarPersonaPorApellido(ObjetosDummy.getAlumnoDos().getApellido());
         iPersona.forEach(System.out::println);
@@ -44,6 +42,6 @@ public class AlumnoCommand implements CommandLineRunner {
         System.out.println("--------- Busqueda de Alumnos por Carrera ---------");
         Iterable<Persona> iAlumnos= ((AlumnoDao)personaDao).buscarAlumnosPorNombreCarrera
                 (ObjetosDummy.getCarreraIngSis().getNombre());
-        iAlumnos.forEach(System.out::println);
+        iAlumnos.forEach(System.out::println);*/
     }
 }

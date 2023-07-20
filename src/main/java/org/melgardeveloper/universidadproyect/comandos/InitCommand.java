@@ -15,18 +15,23 @@ public class InitCommand implements CommandLineRunner {
     @Autowired
     @Qualifier(value = "alumnoDaoImpl")
     private PersonaDao servicioAlumno;
-    @Autowired
+
+    /*@Autowired
     @Qualifier(value = "empleadoDaoImpl")
-    private PersonaDao servicioEmpleado;
+    private PersonaDao servicioEmpleado;*/
+
     @Autowired
     @Qualifier(value = "profesorDaoImpl")
     private PersonaDao servicioProfesor;
-    @Autowired
+
+    /*@Autowired
     private AulaDao servicioAula;
+
     @Autowired
     private PabellonDao servicioPabellon;
+
     @Autowired
-    private CarreraDao servicioCarrera;
+    private CarreraDao servicioCarrera;*/
 
     @Override
     public void run(String... args) throws Exception {

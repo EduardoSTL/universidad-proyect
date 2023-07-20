@@ -1,11 +1,11 @@
-package org.melgardeveloper.universidadproyect.repositories;
+package org.melgardeveloper.universidadproyect.services.contratos;
 
 import org.melgardeveloper.universidadproyect.models.Persona;
 import org.melgardeveloper.universidadproyect.models.enums.TipoEmpleado;
-import org.springframework.stereotype.Repository;
+import org.melgardeveloper.universidadproyect.repositories.PersonaRepository;
 
-@Repository("repositorioEmpleados")
-public interface EmpleadoRepository {
+public interface EmpleadoDao extends PersonaRepository {
+
 
     Iterable<Persona> findEmpleadoByTipoEmpleado(TipoEmpleado tipoEmpleado);
 }
