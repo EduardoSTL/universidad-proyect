@@ -40,7 +40,7 @@ public class CarreraComandos implements CommandLineRunner {
         //Buscar carrera por nombre si contiene:
         /*System.out.println("====Buscar carrera por nombre si contiene====");
         List<Carrera> carreras = (List<Carrera>)servicio.findCarreraByNombreContains("Ingenieria");
-        carreras.forEach(System.out::println);*/
+        carreras.forEach(System.out::println);
 
         //Encontrar carrera ignorando Mayus/Minus:
         /*List<Carrera> carrerasIgnoreCase1 = (List<Carrera>)servicio.findCarreraByNombreContainsIgnoreCase("SISTEMAS");

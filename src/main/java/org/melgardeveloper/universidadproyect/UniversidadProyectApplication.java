@@ -1,5 +1,6 @@
 package org.melgardeveloper.universidadproyect;
 
+import org.melgardeveloper.universidadproyect.models.Alumno;
 import org.melgardeveloper.universidadproyect.models.Direccion;
 import org.melgardeveloper.universidadproyect.models.Persona;
 import org.melgardeveloper.universidadproyect.models.Profesor;
@@ -27,7 +28,7 @@ public class UniversidadProyectApplication {
         }*/
     }
 
-    /*@Bean
+    @Bean
     public CommandLineRunner runner(){
         return args -> {
             Direccion direccion = new Direccion("Calle Libertad", "33", "1122", "San Miguel", "", "Ciudad San Miguel");
@@ -37,7 +38,7 @@ public class UniversidadProyectApplication {
             List<Persona> profesors = (List<Persona>) service.findAll();
             profesors.forEach(System.out::println);
         };
-    }*/
+    }
 
     //Crear profesor
     /*@Bean
@@ -77,3 +78,4 @@ public class UniversidadProyectApplication {
     }
     */
 }
+

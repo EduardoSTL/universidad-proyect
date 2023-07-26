@@ -1,6 +1,7 @@
 package org.melgardeveloper.universidadproyect.repositories;
 
-public interface PabellonRepository {
+import org.melgardeveloper.universidadproyect.models.Pabellon;
 
+public interface PabellonRepository {
 
 }

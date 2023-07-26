@@ -1,6 +1,7 @@
 package org.melgardeveloper.universidadproyect.models;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Positive;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -16,6 +17,9 @@ public class Carrera implements Serializable {
     private Integer id;
     @Column(nullable = false, unique = true, length = 80)
     private String nombre;
+
+    @Positive
+
     @Column(name = "cantidad_materias")
     private Integer cantidadMaterias;
     @Column(name = "fecha_anios")

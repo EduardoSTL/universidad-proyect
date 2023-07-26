@@ -29,7 +29,7 @@ public class ProfesorCommand implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println("----------------- Profesores Command -----------------");
+        /*System.out.println("----------------- Profesores Command -----------------");
         System.out.println("--------- Busqueda de Profesores por Carrera ---------");
         Iterable<Profesor> iProfesores = ((ProfesorDao)personaDao).findProfesoresByCarrera
                 (ObjetosDummy.getCarreraIngSis().getNombre());
@@ -42,6 +42,6 @@ public class ProfesorCommand implements CommandLineRunner {
                 carrerasAsignadas.add(carrera);
             }
             profesor.setCarreras(carrerasAsignadas);
-        }
+        }*/
     }
 }
